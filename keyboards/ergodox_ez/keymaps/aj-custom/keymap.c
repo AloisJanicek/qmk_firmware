@@ -99,9 +99,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------------.           ,--------------------------------------------------.
  * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |  INS   |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
- * |        |      |Lclck | MsUp |Rclck |      |      |           |      | HOME | PgDn | PgUp | END  |      |  DEL   |
+ * |        |      |Lclck | MsUp |Rclck |      |      |           |      | HOME | PgDn | PgUp | END  | VolU |  DEL   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |MsLeft|MsDown|MsRght|      |------|           |------| Left | Down |  Up  | Rght |      |  PSCR  |
+ * |        |      |MsLeft|MsDown|MsRght|      |------|           |------| Left | Down |  Up  | Rght | VolD |  PSCR  |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |      |      |      |      |      |      |           |      | Prev | Mute | Play | Next |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -127,8 +127,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       KC_TRNS, KC_TRNS, KC_TRNS,
   // right hand
   KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_INS,
-  KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_NO, KC_DEL,
-           KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_NO, KC_PSCR,
+  KC_TRNS, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC__VOLUP, KC_DEL,
+           KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC__VOLDOWN, KC_PSCR,
   KC_TRNS, KC_MPRV, KC_MUTE, KC_MPLY, KC_MNXT, KC_NO, KC_NO,
                     KC_VOLU, KC_VOLD, KC_NO, KC_NO, KC_TRNS,
   KC_TRNS, KC_TRNS,
