@@ -29,7 +29,9 @@ This level contains all of the options for that particular keymap. If you wish t
 
 This is a C header file that is one of the first things included, and will persist over the whole project (if included). Lots of variables can be set here and accessed elsewhere. The `config.h` file shouldn't be including other `config.h` files, or anything besides this:
 
-    #include "config_common.h"
+```c
+#include "config_common.h"
+```
 
 
 ## Hardware Options
@@ -95,6 +97,8 @@ This is a C header file that is one of the first things included, and will persi
   * sets the maximum power (in mA) over USB for the device (default: 500)
 * `#define USB_POLLING_INTERVAL_MS 10`
   * sets the USB polling rate in milliseconds for the keyboard, mouse, and shared (NKRO/media keys) interfaces
+* `#define USB_SUSPEND_WAKEUP_DELAY 200`
+  * set the number of milliseconde to pause after sending a wakeup packet
 * `#define F_SCL 100000L`
   * sets the I2C clock rate speed for keyboards using I2C. The default is `400000L`, except for keyboards using `split_common`, where the default is `100000L`.
 

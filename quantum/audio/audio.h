@@ -13,8 +13,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef AUDIO_H
-#define AUDIO_H
+
+#pragma once
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -83,6 +83,7 @@ void increase_tempo(uint8_t tempo_change);
 void decrease_tempo(uint8_t tempo_change);
 
 void audio_init(void);
+void audio_startup(void);
 
 #ifdef PWM_AUDIO
 void play_sample(uint8_t* s, uint16_t l, bool r);
@@ -103,5 +104,3 @@ void play_notes(float (*np)[][2], uint16_t n_count, bool n_repeat);
 #define PLAY_LOOP(note_array) play_notes(&note_array, NOTE_ARRAY_SIZE((note_array)), true)
 
 bool is_playing_notes(void);
-
-#endif
